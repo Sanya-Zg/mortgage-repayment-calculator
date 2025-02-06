@@ -9,43 +9,80 @@
   <script src="code.js" defer></script>
 </head>
 <body>
+  <main>
+    <!-- -------Main section----- -->
+    <div class="main__section">
+      <div class="container">
+        <div class="main__section-title">
+          <h1>Mortgage Calculator</h1>
+          <button type="button" class="clear">Clear All</button>
+        </div>
+        <!-- -----Inputs mortgage------ -->
+        <div class="main__section-data input_flex">
+          <label for="amount">Mortgage Amount
+            <div class="num_input">
+              <input type="number" class="amount" id="amount">
+            </div>
+          </label>
+          <div class="input_flex">
+            <label for="term">Mortgage Term
+              <div class="term_outer">
+                <input type="number" class="term" id="term">
+              </div>
+            </label>
+            <label for="rate">Interest Rate
+              <div class="rate_outer">
+                <input type="number" class="rate" id="rate">
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- -----Type mortgage------ -->
+        <div class="main__section-type">
+          <p class="type-title">Mortgage Type</p>
+          <div class="type-body">
+            <input type="radio" id="repay" class="first-check" name="radio">
+            <label for="repay" class="font-color">Repayment</label>
+          </div>
+          <div class="type-body">
+            <input type="radio" id="interest" class="second-check" name="radio">
+            <label for="interest" class="font-color">Interest Only</label>
+          </div>
+        </div>
+        <!-- ---Button result----- -->
+        <button type="button" class="calculate" id="calculate">Calculate Repayments</button>
+      </div>
+    </div>
+    <!-- ------Result section------ -->
+    <div class="result__section">
+      <div class="container">
+        <!-- ----------Result-first------- -->
+        <div class="result_intro">
+          <div class="image_calculator">
+            <img src="./assets/images/illustration-empty.svg" alt="calculator image">
+          </div>
+          <h2>Results shown here</h2>
+          <p>Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.</p>
+        </div>
+        <!-- -------Result second------ -->
+        <div class="result_content">
+          <h2>Your results</h2>
+          <p>Your results are shown below based on the information you provided. 
+              To adjust the results, edit the form and click “calculate repayments” again.</p>
+            <div class="result_content-output">
+              <div class="sum">
+                <p>Your monthly repayments</p>
+                <span class="month_output">£1,797.74</span>
+                <hr class="hr">
+                <p>Total you'll repay over the term</p>
+                <span class="total_output">£539,322.94</span>
+              </div>
+            </div>
+        </div>
 
-  Mortgage Calculator
-  Clear All
-
-  Mortgage Amount
-
-  Mortgage Term
-
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
+      </div>
+    </div>
+  </main>
 </body>
 </html>
