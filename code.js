@@ -73,17 +73,20 @@ function inputValidation(input, errMsg){
         return false;
     }
     if (!/^\d+(\.\d+)?$/.test(valueWithoutCommas)) {
-        errMsg.textContent = 'Enter the correct number';
+        input.classList.add('red_border');
+        resIntro.style.display = 'block';
+        resContent.style.display = 'none';
+        errMsg.textContent = 'Enter a number';
         return false;
     }
     return true;
 }
-
+    // Puts a comma after three numbers
     amount.addEventListener('input', function () {
         let filterValue = this.value.replace(/\D/g, '');
         this.value = filterValue.replace(/\B(?=(\d{3})+(?!\d))/g, ','); 
     })
-
+    
     const arrErr = [amountErr, termErr, rateErr, radioErr];
     const arrInputs = [amount, term, rate];
     const arrBlocks = [numBlock, termBlock, rateBlock];

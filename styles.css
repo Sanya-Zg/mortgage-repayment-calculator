@@ -37,19 +37,10 @@ input[type='text']{
     font-size: 18px;
     font-weight: 700;
 }
-/* input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-    -moz-appearance: textfield;
-} */
 input[type="text"]:hover {
     outline: none; 
     border: 2px solid #000;
     cursor: pointer;
-    
 }
 input[type="text"]:focus {
     outline: none; 
@@ -74,10 +65,8 @@ p{
 body{
     margin: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
-    /* max-width: 378px; */
     font-size: 16px;
     background-color: #E4F4FD;
-    /* overflow: hidden; */
 }
 
 main{
@@ -94,9 +83,6 @@ main{
     flex-direction: column;
     gap: 24px;
 }
-.main__section-title {
-   
-}
 .clear {
     color: #4E6E7E;
     border: 0;
@@ -105,9 +91,6 @@ main{
     font-size: 16px;
     padding: 3px 0;
     margin-top: 8px;
-}
-.main__section-data {
-    /* margin: 24px 0; */
 }
 .i_flex{
     display: flex;
@@ -138,10 +121,12 @@ main{
     border-bottom-left-radius: 4px;
     padding: 11px 16px;
     font-weight: bold;
+    height: 77%;
 }
 .num_input.empty::before{
     background-color: #D73328;
     color: #fff;  
+    height: 49%;
 }
  .err{
     color: #D73328;
@@ -152,9 +137,6 @@ main{
  .visib{
     display: block;
  }
-.input_flex{
-    
-}
 .term_outer {
     position: relative;
 }
@@ -168,10 +150,12 @@ main{
     border-bottom-right-radius: 4px;
     padding: 11px 16px;
     font-weight: bold;
+    height: 77%;
 }
 .term_outer.empty::after{
     background-color: #D73328;
     color: #fff;  
+    height: 49%;
 }
 .term{
     padding-left: 16px;
@@ -190,10 +174,12 @@ main{
     border-bottom-right-radius: 4px;
     padding: 11px 16px;
     font-weight: bold;
+    height: 77%;
 }
 .rate_outer.empty::after{
     background-color: #D73328;
     color: #fff;  
+    height: 49%;
 }
 .rate {
     padding-left: 16px;
@@ -207,9 +193,6 @@ main{
 .main__section-type label{
     font-size: 18px;
     font-weight: bold;
-}
-.type-title {
-    
 }
 .type-body {
     width: 100%;
@@ -271,7 +254,6 @@ input[type="radio"]:checked::before {
 }
 .result_intro {
     text-align: center;
-    /* display: none; */
 }
 .image_calculator {
     margin-bottom: 1rem;
