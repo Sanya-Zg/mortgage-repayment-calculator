@@ -15,24 +15,27 @@
       <div class="container">
         <div class="main__section-title">
           <h1>Mortgage Calculator</h1>
-          <button type="button" class="clear">Clear All</button>
+          <button type="button" class="clear" id="clear">Clear All</button>
         </div>
         <!-- -----Inputs mortgage------ -->
-        <div class="main__section-data input_flex">
+        <div class="main__section-data i_flex">
           <label for="amount">Mortgage Amount
             <div class="num_input">
-              <input type="number" class="amount" id="amount">
+              <input type="text" class="amount" id="amount">
+              <p class="err" id = "amount_err"></p>
             </div>
           </label>
           <div class="input_flex">
             <label for="term">Mortgage Term
               <div class="term_outer">
-                <input type="number" class="term" id="term">
+                <input type="text" class="term" id="term">
+                <p class="err" id="term_err"></p>
               </div>
             </label>
             <label for="rate">Interest Rate
               <div class="rate_outer">
-                <input type="number" class="rate" id="rate">
+                <input type="text" class="rate" id="rate">
+                <p class="err" id="rate_err"></p>
               </div>
             </label>
           </div>
@@ -41,13 +44,14 @@
         <div class="main__section-type">
           <p class="type-title">Mortgage Type</p>
           <div class="type-body">
-            <input type="radio" id="repay" class="first-check" name="radio">
+            <input type="radio" id="repay" class="check" name="radio">
             <label for="repay" class="font-color">Repayment</label>
           </div>
           <div class="type-body">
-            <input type="radio" id="interest" class="second-check" name="radio">
+            <input type="radio" id="interest" class="check" name="radio">
             <label for="interest" class="font-color">Interest Only</label>
           </div>
+          <p class="err mt" id="radio_err"></p>
         </div>
         <!-- ---Button result----- -->
         <button type="button" class="calculate" id="calculate">Calculate Repayments</button>
@@ -73,10 +77,10 @@
             <div class="result_content-output">
               <div class="sum">
                 <p>Your monthly repayments</p>
-                <span class="month_output">£1,797.74</span>
+                <span class="month_output" id="month"></span> 
                 <hr class="hr">
                 <p>Total you'll repay over the term</p>
-                <span class="total_output">£539,322.94</span>
+                <span class="total_output" id="total"></span>
               </div>
             </div>
         </div>
